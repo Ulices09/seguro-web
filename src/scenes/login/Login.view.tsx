@@ -1,7 +1,8 @@
 import { FC } from 'react';
+import Layout from './components/layout';
 
 const Login: FC = () => {
-  return <h1>Login</h1>;
+  return <Layout />;
 };
 
 export default Login;
