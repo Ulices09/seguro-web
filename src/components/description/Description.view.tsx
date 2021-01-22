@@ -1,11 +1,8 @@
 import { FC } from 'react';
+import { IDescriptionItem } from 'common/types';
 import styles from './Description.module.scss';
 
-type IProps = {
-  icon: string;
-  text: string;
-  className?: string;
-};
+type IProps = IDescriptionItem;
 
 const Description: FC<IProps> = ({ icon, text, className }) => (
   <div className={`${styles.container} ${className}`}>

@@ -6,6 +6,8 @@ import ClinicSvg from './clinic.svg';
 import MoneySvg from './money.svg';
 import MobileSvg from './mobile.svg';
 import ShieldSvg from './shield.svg';
+import BackSvg from './back.svg';
+import NextSvg from './next.svg';
 
 export {
   BaseSvg,
@@ -16,4 +18,6 @@ export {
   MoneySvg,
   MobileSvg,
   ShieldSvg,
+  BackSvg,
+  NextSvg,
 };

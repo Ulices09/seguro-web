@@ -5,7 +5,7 @@ $moible-bp: 767.98px;
 }
 
 .header {
-  border-bottom: 1px solid #fc606b;
+  border-bottom: 0.2px solid white;
   height: 64px;
 }
 
@@ -19,16 +19,12 @@ $moible-bp: 767.98px;
   position: absolute;
   top: 0;
   left: 0;
-  width: 55%;
+  width: 48%;
   z-index: -1;
 
   @media (max-width: $moible-bp) {
     width: 100%;
   }
-}
-
-.content {
-  position: relative;
 }
 
 .base {
@@ -78,5 +74,14 @@ $moible-bp: 767.98px;
 
   @media (max-width: $moible-bp) {
     font-size: 32px;
+  }
+}
+
+.content {
+  margin-top: 0;
+  background-color: rebeccapurple;
+
+  @media (max-width: $moible-bp) {
+    margin-top: 80px;
   }
 }
