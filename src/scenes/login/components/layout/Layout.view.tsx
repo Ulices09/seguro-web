@@ -14,18 +14,30 @@ import { Description } from 'components';
 
 const Layout: FC = () => {
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-12 col-lg-7">
-          <div className={styles.content}>
-            <img src={LogoSvg} alt="logo" className={styles.logo} />
-            <img src={BaseSvg} alt="base" className={styles.base} />
-            <img src={BaseMobileSvg} alt="base" className={styles.baseMobile} />
-            <img src={PeopleSvg} alt="people" className={styles.people} />
+    <div className={styles.container}>
+      <div className={styles.background}>
+        <div className={styles.content}>
+          <img src={BaseSvg} alt="base" className={styles.base} />
+          <img src={BaseMobileSvg} alt="base" className={styles.baseMobile} />
+          <img src={PeopleSvg} alt="people" className={styles.people} />
+        </div>
+      </div>
+      <div className={styles.header}>
+        <div className="container">
+          <div className="row">
+            <div className={`col ${styles.headerContent}`}>
+              <img src={LogoSvg} alt="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-lg-7">
             <div className={styles.info}>
               <span className={styles.title}>Seguro de</span>
               <br />
-              <span className={`font-weight-bold ${styles.title}`}>Salud</span>
+              <span className={`font-bold ${styles.title}`}>Salud</span>
               <Description
                 icon={ShieldSvg}
                 text="Cómpralo de manera fácil"
@@ -48,12 +60,12 @@ const Layout: FC = () => {
               />
             </div>
           </div>
-        </div>
-        <div
-          className="col-12 mt-5 mt-lg-0 col-lg-5"
-          style={{ backgroundColor: 'cyan' }}
-        >
-          <h1>content</h1>
+          <div
+            className="col-12 mt-5 mt-lg-0 col-lg-5"
+            style={{ backgroundColor: 'cyan' }}
+          >
+            <h1>content</h1>
+          </div>
         </div>
       </div>
     </div>

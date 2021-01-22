@@ -1,9 +1,25 @@
 @import 'vendors/vendors';
 
-body {
+@font-face {
+  font-family: 'Lato-Light';
+  src: local('Lato-Light'),
+    url('/assets/fonts/Lato-Light.ttf') format('truetype');
   font-weight: 300;
 }
 
-.container-fluid {
-  padding: 0px;
+@font-face {
+  font-family: 'Lato-Regular';
+  src: local('Lato-Regular'),
+    url('/assets/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+body {
+  font-weight: 300;
+  font-family: 'Lato-Light';
+}
+
+.font-bold {
+  font-family: 'Lato-Regular';
+  font-weight: normal;
 }

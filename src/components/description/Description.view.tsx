@@ -12,7 +12,7 @@ const Description: FC<IProps> = ({ icon, text, className }) => (
     <div className={styles.icon}>
       <img src={icon} alt="icon" className="mr-2" />
     </div>
-    <span>{text}</span>
+    <span className={styles.text}>{text}</span>
   </div>
 );
 
