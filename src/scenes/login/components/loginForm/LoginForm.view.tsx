@@ -18,7 +18,14 @@ type IProps = {
 };
 
 const LoginForm: FC<IProps> = (props) => {
-  const { handleSubmit, control, errors } = useForm<ILoginForm>();
+  const {
+    handleSubmit,
+    control,
+    errors,
+    formState: { isValid },
+  } = useForm<ILoginForm>({
+    mode: 'onChange',
+  });
 
   const onSubmit = (data: ILoginForm) => props.onSubmit(data);
 
@@ -157,7 +164,9 @@ const LoginForm: FC<IProps> = (props) => {
       </div>
       <div className="row">
         <div className="col">
-          <Button type="submit">COMENCEMOS</Button>
+          <Button type="submit" disabled={!isValid}>
+            COMENCEMOS
+          </Button>
         </div>
       </div>
     </form>
