@@ -9,7 +9,7 @@ type IProps = {
 const Select: FC<IProps> = ({ className, placeholder, items, ...rest }) => {
   return (
     <div className={`${styles.container} ${className}`}>
-      <select className={`${styles.select} ${className}`} {...rest}>
+      <select className={`${styles.select}`} {...rest}>
         {items.map((item, index) => (
           <option key={index} value={item.value}>
             {item.text}

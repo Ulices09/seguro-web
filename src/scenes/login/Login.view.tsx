@@ -14,18 +14,24 @@ const Login: FC = () => {
       <Title text="Obtén tu" secondText="seguro ahora" />
       <span>Ingresa tus datos para comenzar.</span>
       <div className="row my-4">
-        <div className="col">
-          <InputText placeholder="Nro de Documento" />
+        <div className="col-3 pr-0">
+          <Select items={documentTypes} className="border-rr-0" />
         </div>
-      </div>
-      <div className="row mb-4">
-        <div className="col">
-          <Select items={documentTypes} />
+        <div className="col-9 pl-0">
+          <InputText
+            placeholder="Nro de Documento"
+            className="border-lr-0 border-l-0"
+          />
         </div>
       </div>
       <div className="row mb-4">
         <div className="col">
           <InputText type="date" placeholder="Fecha nacimiento" />
+        </div>
+      </div>
+      <div className="row mb-4">
+        <div className="col">
+          <InputText placeholder="Celular" />
         </div>
       </div>
       <div className="row mb-4">
