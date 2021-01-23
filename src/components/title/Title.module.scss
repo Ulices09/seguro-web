@@ -1,0 +1,12 @@
+.text {
+  font-size: 32px;
+  display: block;
+
+  @media (max-width: 991.98px) {
+    font-size: 26px;
+  }
+}
+
+.second {
+  color: var(--primary-color);
+}

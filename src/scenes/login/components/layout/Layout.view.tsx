@@ -4,7 +4,7 @@ import styles from './Layout.module.scss';
 import { InfoCarousel } from 'components';
 import { items } from './data';
 
-const Layout: FC = () => {
+const Layout: FC = ({ children }) => {
   return (
     <div className={styles.container}>
       <div className={styles.background}>
@@ -33,9 +33,7 @@ const Layout: FC = () => {
               <InfoCarousel items={items} className="mt-4" />
             </div>
           </div>
-          <div className={`col-12 col-lg-5 ${styles.content}`}>
-            <h1>content</h1>
-          </div>
+          <div className={`col-12 col-lg-5 ${styles.content}`}>{children}</div>
         </div>
       </div>
     </div>
