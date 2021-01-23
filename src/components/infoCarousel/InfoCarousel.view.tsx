@@ -21,7 +21,7 @@ const InfoCarousel: FC<IProps> = ({ items, className }) => {
 
   return (
     <>
-      <div className={`d-none d-md-block ${className}`}>
+      <div className={`d-none d-lg-block ${className}`}>
         {items.map((item, index) => (
           <Description
             key={index}
@@ -31,7 +31,7 @@ const InfoCarousel: FC<IProps> = ({ items, className }) => {
           />
         ))}
       </div>
-      <div className={`d-block d-md-none ${className}`}>
+      <div className={`d-block d-lg-none ${className}`}>
         <Description
           icon={activeItem.icon}
           text={activeItem.text}
