@@ -1,6 +1,12 @@
 import { FC } from 'react';
-import { Title, Button, InputText } from 'components';
+import { Title, Button, InputText, Select } from 'components';
 import Layout from './components/layout';
+import { ISelectItem } from 'common/types';
+
+const documentTypes: ISelectItem[] = [
+  { value: 'DNI', text: 'DNI' },
+  { value: 'C.E', text: 'C.E' },
+];
 
 const Login: FC = () => {
   return (
@@ -10,6 +16,11 @@ const Login: FC = () => {
       <div className="row my-4">
         <div className="col">
           <InputText placeholder="Nro de Documento" />
+        </div>
+      </div>
+      <div className="row mb-2">
+        <div className="col">
+          <Select items={documentTypes} />
         </div>
       </div>
       <div className="row">

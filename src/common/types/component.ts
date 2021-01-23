@@ -3,3 +3,8 @@ export type IDescriptionItem = {
   text: string;
   className?: string;
 };
+
+export type ISelectItem = {
+  value: string | number;
+  text: string;
+};

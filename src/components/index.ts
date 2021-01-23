@@ -4,3 +4,4 @@ export { default as InfoCarousel } from './infoCarousel';
 export { default as Title } from './title';
 export { default as Button } from './button';
 export { default as InputText } from './inputText';
+export { default as Select } from './select';

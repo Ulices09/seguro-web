@@ -1,0 +1,18 @@
+.container {
+  border: 1px solid #c5cbe0;
+  height: 56px;
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+
+.select {
+  border: 0;
+  outline: none;
+  height: 56px;
+  background-color: white;
+}
