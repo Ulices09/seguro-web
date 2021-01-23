@@ -1,0 +1,37 @@
+.container {
+  border: 1px solid #c5cbe0;
+  height: 56px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.placeholder {
+  font-size: 16px;
+  color: #a3abcc;
+
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+
+  &.focused {
+    font-size: 12px;
+  }
+}
+
+.placeholderMain {
+  font-size: 16px;
+  color: #a3abcc;
+}
+
+.input {
+  border: 0;
+  outline: none;
+  height: 0;
+
+  &.focused {
+    height: auto;
+  }
+}
