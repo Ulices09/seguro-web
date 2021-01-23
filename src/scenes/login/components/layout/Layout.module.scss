@@ -1,4 +1,4 @@
-$moible-bp: 991.98px;
+$mobile-bp: 991.98px;
 
 .container {
   position: relative;
@@ -22,7 +22,7 @@ $moible-bp: 991.98px;
   width: 48%;
   z-index: -1;
 
-  @media (max-width: $moible-bp) {
+  @media (max-width: $mobile-bp) {
     width: 100%;
   }
 }
@@ -31,7 +31,7 @@ $moible-bp: 991.98px;
   width: 100%;
   height: auto;
 
-  @media (max-width: $moible-bp) {
+  @media (max-width: $mobile-bp) {
     display: none;
   }
 }
@@ -39,7 +39,7 @@ $moible-bp: 991.98px;
 .baseMobile {
   display: none;
 
-  @media (max-width: $moible-bp) {
+  @media (max-width: $mobile-bp) {
     display: block;
   }
 }
@@ -49,7 +49,7 @@ $moible-bp: 991.98px;
   top: 100px;
   margin-left: -190px;
 
-  @media (max-width: $moible-bp) {
+  @media (max-width: $mobile-bp) {
     bottom: -20px;
     top: auto;
     right: -35px;
@@ -62,7 +62,7 @@ $moible-bp: 991.98px;
   color: white;
   margin-top: 100px;
 
-  @media (max-width: $moible-bp) {
+  @media (max-width: $mobile-bp) {
     margin-top: 16px;
     width: 70%;
   }
@@ -71,7 +71,7 @@ $moible-bp: 991.98px;
 .title {
   font-size: 44px;
 
-  @media (max-width: $moible-bp) {
+  @media (max-width: $mobile-bp) {
     font-size: 32px;
   }
 }
@@ -79,7 +79,7 @@ $moible-bp: 991.98px;
 .content {
   margin-top: 0;
 
-  @media (max-width: $moible-bp) {
+  @media (max-width: $mobile-bp) {
     margin-top: 80px;
   }
 }

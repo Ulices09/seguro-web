@@ -1,10 +1,10 @@
-$moible-bp: 991.98px;
+$mobile-bp: 991.98px;
 
 .container {
   display: flex;
   align-items: center;
 
-  @media (max-width: $moible-bp) {
+  @media (max-width: $mobile-bp) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -16,7 +16,7 @@ $moible-bp: 991.98px;
   justify-content: center;
   width: 30px;
 
-  @media (max-width: $moible-bp) {
+  @media (max-width: $mobile-bp) {
     margin-bottom: 10px;
     justify-content: flex-start;
   }
