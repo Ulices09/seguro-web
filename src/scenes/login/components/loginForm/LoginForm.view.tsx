@@ -14,6 +14,7 @@ export type ILoginForm = {
 };
 
 type IProps = {
+  loading: boolean;
   onSubmit: (data: ILoginForm) => void;
 };
 
@@ -164,7 +165,7 @@ const LoginForm: FC<IProps> = (props) => {
       </div>
       <div className="row">
         <div className="col">
-          <Button type="submit" disabled={!isValid}>
+          <Button type="submit" disabled={!isValid || props.loading}>
             COMENCEMOS
           </Button>
         </div>
