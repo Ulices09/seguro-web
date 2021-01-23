@@ -24,9 +24,9 @@
 .input {
   border: 0;
   outline: none;
-  height: 0;
+  display: none;
 
   &.focused {
-    height: auto;
+    display: block;
   }
 }

@@ -23,6 +23,11 @@ const Login: FC = () => {
           <Select items={documentTypes} />
         </div>
       </div>
+      <div className="row my-4">
+        <div className="col">
+          <InputText type="date" placeholder="Fecha nacimiento" />
+        </div>
+      </div>
       <div className="row">
         <div className="col">
           <Button>COMENCEMOS</Button>

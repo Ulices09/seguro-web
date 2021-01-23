@@ -3,6 +3,7 @@ import styles from './InputText.module.scss';
 
 const InputText: FC<InputHTMLAttributes<any>> = ({
   className,
+  type,
   placeholder,
   onBlur,
   ...rest
@@ -35,7 +36,7 @@ const InputText: FC<InputHTMLAttributes<any>> = ({
       </span>
       <input
         {...rest}
-        type="text"
+        type={type || 'text'}
         ref={inputRef}
         className={`${styles.input} ${keepFocusedStyle() && styles.focused}`}
         placeholder={undefined}
