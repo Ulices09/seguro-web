@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { Button, InputText, Select, Checkbox } from 'components';
 import { documentTypes } from './data';
+import { messages } from 'common/constants';
 
 export type ILoginForm = {
   documentType: string;
@@ -17,7 +18,7 @@ type IProps = {
 };
 
 const LoginForm: FC<IProps> = (props) => {
-  const { handleSubmit, control } = useForm<ILoginForm>();
+  const { handleSubmit, control, errors } = useForm<ILoginForm>();
 
   const onSubmit = (data: ILoginForm) => props.onSubmit(data);
 
@@ -44,7 +45,11 @@ const LoginForm: FC<IProps> = (props) => {
             name="document"
             control={control}
             defaultValue=""
-            rules={{ required: { value: true, message: 'Campo Requerido' } }}
+            rules={{
+              required: { value: true, message: messages.REQUIRED_FIELD },
+              maxLength: { value: 8, message: 'Documento no válido' },
+              minLength: { value: 8, message: 'Documento no válido' },
+            }}
             render={(props) => (
               <InputText
                 value={props.value}
@@ -52,6 +57,7 @@ const LoginForm: FC<IProps> = (props) => {
                 className="border-lr-0 border-l-0"
                 maxLength={8}
                 onChange={(e) => props.onChange(e.target.value)}
+                error={errors.document?.message}
               />
             )}
           />
@@ -63,13 +69,16 @@ const LoginForm: FC<IProps> = (props) => {
             name="birthday"
             control={control}
             defaultValue=""
-            rules={{ required: { value: true, message: 'Campo Requerido' } }}
+            rules={{
+              required: { value: true, message: messages.REQUIRED_FIELD },
+            }}
             render={(props) => (
               <InputText
                 type="date"
                 placeholder="Fecha nacimiento"
                 value={props.value}
                 onChange={(e) => props.onChange(e.target.value)}
+                error={errors.birthday?.message}
               />
             )}
           />
@@ -81,12 +90,15 @@ const LoginForm: FC<IProps> = (props) => {
             name="cellphone"
             control={control}
             defaultValue=""
-            rules={{ required: { value: true, message: 'Campo Requerido' } }}
+            rules={{
+              required: { value: true, message: messages.REQUIRED_FIELD },
+            }}
             render={(props) => (
               <InputText
                 placeholder="Celular"
                 value={props.value}
                 onChange={(e) => props.onChange(e.target.value)}
+                error={errors.cellphone?.message}
               />
             )}
           />
@@ -98,7 +110,7 @@ const LoginForm: FC<IProps> = (props) => {
             name="checkTermsandConditions"
             control={control}
             defaultValue={false}
-            rules={{ required: { value: true, message: 'Campo Requerido' } }}
+            rules={{ required: true }}
             render={(props) => (
               <Checkbox
                 text={
@@ -112,6 +124,7 @@ const LoginForm: FC<IProps> = (props) => {
                 }
                 value={props.value}
                 onChange={(e) => props.onChange(e.target.checked)}
+                hasError={errors.checkTermsandConditions != null}
               />
             )}
           />
@@ -123,7 +136,7 @@ const LoginForm: FC<IProps> = (props) => {
             name="checkShippingPolicies"
             control={control}
             defaultValue={false}
-            rules={{ required: { value: true, message: 'Campo Requerido' } }}
+            rules={{ required: true }}
             render={(props) => (
               <Checkbox
                 text={
@@ -136,6 +149,7 @@ const LoginForm: FC<IProps> = (props) => {
                 }
                 value={props.value}
                 onChange={(e) => props.onChange(e.target.checked)}
+                hasError={errors.checkShippingPolicies != null}
               />
             )}
           />

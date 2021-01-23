@@ -6,3 +6,4 @@ export { default as Button } from './button';
 export { default as InputText } from './inputText';
 export { default as Select } from './select';
 export { default as Checkbox } from './checkbox';
+export { default as InvalidFeedback } from './invalidFeedback';

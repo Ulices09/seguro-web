@@ -1,8 +1,14 @@
 import { FC, InputHTMLAttributes, useEffect, useRef, useState } from 'react';
+import { InvalidFeedback } from 'components';
 import styles from './InputText.module.scss';
 
-const InputText: FC<InputHTMLAttributes<any>> = ({
+type IProps = {
+  error?: string;
+} & InputHTMLAttributes<any>;
+
+const InputText: FC<IProps> = ({
   className,
+  error,
   type,
   placeholder,
   onBlur,
@@ -23,26 +29,29 @@ const InputText: FC<InputHTMLAttributes<any>> = ({
   const keepFocusedStyle = () => focused || !!inputRef.current?.value;
 
   return (
-    <div
-      className={`${styles.container} ${className}`}
-      onClick={() => setFocused(true)}
-    >
-      <span
-        className={`font-bold ${styles.placeholder} ${
-          keepFocusedStyle() && styles.focused
-        }`}
+    <>
+      <div
+        className={`${styles.container} ${className} ${error && styles.error}`}
+        onClick={() => setFocused(true)}
       >
-        {placeholder}
-      </span>
-      <input
-        {...rest}
-        type={type || 'text'}
-        ref={inputRef}
-        className={`${styles.input} ${keepFocusedStyle() && styles.focused}`}
-        placeholder={undefined}
-        onBlur={handleBlur}
-      />
-    </div>
+        <span
+          className={`font-bold ${styles.placeholder} ${
+            keepFocusedStyle() && styles.focused
+          }`}
+        >
+          {placeholder}
+        </span>
+        <input
+          {...rest}
+          type={type || 'text'}
+          ref={inputRef}
+          className={`${styles.input} ${keepFocusedStyle() && styles.focused}`}
+          placeholder={undefined}
+          onBlur={handleBlur}
+        />
+      </div>
+      {error && <InvalidFeedback>{error}</InvalidFeedback>}
+    </>
   );
 };
 
