@@ -33,7 +33,9 @@ const Layout: FC = ({ children }) => {
               <InfoCarousel items={items} className="mt-4" />
             </div>
           </div>
-          <div className={`col-12 col-lg-5 ${styles.content}`}>{children}</div>
+          <div className={`col-12 col-lg-5 mb-5 ${styles.content}`}>
+            {children}
+          </div>
         </div>
       </div>
     </div>

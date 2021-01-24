@@ -41,7 +41,7 @@ const Layout: FC<IProps> = ({
       <div className="container">
         <div className="row">
           <div className="col-12 col-lg-5 " />
-          <div className={`col-12 col-lg-7 px-0 ${styles.content}`}>
+          <div className={`col-12 col-lg-6 px-0 ${styles.content}`}>
             <Header
               step={step}
               maxStep={maxStep}
@@ -50,7 +50,7 @@ const Layout: FC<IProps> = ({
               textDescription={textDescription}
               onBack={onBack}
             />
-            <div style={{ padding: '0 15px' }}>{children}</div>
+            <div className="mx-3 mx-lg-0">{children}</div>
           </div>
         </div>
       </div>
