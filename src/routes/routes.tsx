@@ -11,6 +11,9 @@ const Routes = () => (
       </Route>
       <Route exact path={paths.LOGIN} component={Login} />
       <Route exact path={paths.QUOTE} component={Quote} />
+      <Route>
+        <Redirect to={paths.LOGIN} />
+      </Route>
     </Switch>
   </BrowserRouter>
 );
