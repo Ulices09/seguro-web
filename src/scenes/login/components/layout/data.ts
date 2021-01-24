@@ -4,7 +4,7 @@ import { IDescriptionItem } from 'common/types';
 export const items: IDescriptionItem[] = [
   {
     icon: ShieldSvg,
-    text: 'Cómpralo de manera fácil',
+    text: 'Cómpralo de manera fácil y rápida',
     className: 'mb-3',
   },
   {
