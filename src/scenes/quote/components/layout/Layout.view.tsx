@@ -50,7 +50,7 @@ const Layout: FC<IProps> = ({
               textDescription={textDescription}
               onBack={onBack}
             />
-            <div className="mx-3 mx-lg-0">{children}</div>
+            <div className="mx-3 mx-lg-0 mb-5">{children}</div>
           </div>
         </div>
       </div>
