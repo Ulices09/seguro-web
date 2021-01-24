@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { Button, InputText, Select } from 'components';
-import { documentTypes } from '../../../login/components/loginForm/data';
+import { documentTypes } from 'common/data';
 import { messages } from 'common/constants';
 
 export type IStepOneForm = {

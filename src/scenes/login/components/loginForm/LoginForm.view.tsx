@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { Button, InputText, Select, Checkbox } from 'components';
-import { documentTypes } from './data';
+import { documentTypes } from 'common/data';
 import { messages } from 'common/constants';
 
 export type ILoginForm = {

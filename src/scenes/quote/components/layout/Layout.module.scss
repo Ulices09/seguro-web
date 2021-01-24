@@ -33,7 +33,7 @@ $mobile-bp: 991.98px;
   width: 0;
   height: 0;
   top: 0;
-  border-top: 80vh solid red;
+  border-top: 80vh solid var(--primary-color);
   border-right: 30px solid transparent;
   z-index: -1;
 }
