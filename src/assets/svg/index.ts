@@ -8,6 +8,7 @@ import MobileSvg from './mobile.svg';
 import ShieldSvg from './shield.svg';
 import BackSvg from './back.svg';
 import NextSvg from './next.svg';
+import BackHeaderSvg from './back-header.svg';
 
 export {
   BaseSvg,
@@ -20,4 +21,5 @@ export {
   ShieldSvg,
   BackSvg,
   NextSvg,
+  BackHeaderSvg,
 };

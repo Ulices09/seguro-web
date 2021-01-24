@@ -1,0 +1,40 @@
+$mobile-bp: 991.98px;
+
+.container {
+  @media (max-width: $mobile-bp) {
+    background-color: #f7f8fc;
+    padding: 20px 20px 48px 20px;
+    margin-left: -20;
+    position: relative;
+  }
+}
+
+.steps {
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 12px;
+  display: flex;
+  transform: translateX(-40px);
+
+  @media (max-width: $mobile-bp) {
+    transform: translateX(0);
+  }
+}
+
+.stepText {
+  margin-top: auto;
+  margin-bottom: auto;
+  color: var(--primary-color);
+  margin-right: 8px;
+
+  @media (max-width: $mobile-bp) {
+    display: none;
+  }
+}
+
+.stepNumber {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 8px;
+  color: var(--primary-color);
+}
