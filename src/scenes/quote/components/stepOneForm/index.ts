@@ -1,1 +1,1 @@
-export { default } from './StepOneForm.view';
+export { default } from './StepOneForm';
