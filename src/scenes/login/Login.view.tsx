@@ -32,7 +32,7 @@ const Login: FC = () => {
       <Title
         text="Obtén tu"
         secondText="seguro ahora"
-        description="Ingresa tus datos para comenzar."
+        description="Ingresa los datos para comenzar."
       />
       <LoginForm loading={loading} onSubmit={handleSubmit} />
     </Layout>

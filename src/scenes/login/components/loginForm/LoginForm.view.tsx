@@ -83,7 +83,7 @@ const LoginForm: FC<IProps> = (props) => {
             render={(props) => (
               <InputText
                 type="date"
-                placeholder="Fecha nacimiento"
+                placeholder="Fecha de nacimiento"
                 value={props.value}
                 onChange={(e) => props.onChange(e.target.value)}
                 error={errors.birthday?.message}
